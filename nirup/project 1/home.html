@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="home.css">
+<style>
+    #left{
+        font-size:25px;
+        margin-right: 550px;
+    }
+</style>
+</head>
+<body>
+    <div id="firstimage">
+    <div id="left">
+        Restos
+    </div>
+    
+    <div id="nav" name="nav">
+      <span id="left"> <a href="">Resto</a></span>
+       <a href="#">HOME</a>
+       <a href="#">ABOUT</a>
+       <a href="#">MENU</a>
+       <a href="#">BOOKTABLE</a>
+
+
+
+       <button id="orderonline">order online</button>
+       <a href="home2.html" id="home2.html">
+       <div id="cart-icon">
+        <svg id="svg"class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+    </div>
+</a>
+</div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<div id="today">
+<div id="container1" class="container1">
+    <div id="imagebox1" class="imagebox1">
+</div>
+<div id="offer1" class="offer1">
+    <h4>Tasty Thursday <br> 20% off</h4>
+   <br>
+   <button ID="burgeroffer1">ORDER NOW!</button>
+</div></div>
+
+
+<div id="container2" class="container2">
+    <div id="imagebox2" class="imagebox2">
+</div>
+<div id="offer2" class="offer2">
+    <h4>Tasty Thursday <br> 20% off</h4>
+   <br>
+   <button ID="burgeroffer2">ORDER NOW!</button>
+</div></div></div>
+<br>
+<h1 id="menus">Our Menu</h1>
+
+<div class="Menubutton">
+    <button class="filter-button" data-filter="burger">Burger</button>
+    <button class="filter-button" data-filter="pizza">Pizza</button>
+    <button class="filter-button" data-filter="pasta">pasta</button>
+    <button class="filter-button" data-filter="fries">Fries</button>
+    <button class="filter-button" data-filter="all">All</button>
+</div>
+
+
+
+<div class="container">
+    <div class="card" data-category="pizza">
+        <img src="f1.png" alt="Pizza" class="card-image" >
+        <div id="cardinfo">
+        <h2 class="card-title">Delicious Pizza</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$20<span id="buttonspace"><button class="card-button" onclick="addToCart('Delicious Pizza', 20)">Add to Cart</button></span></p>
+        </div>
+    </div>
+    <div class="card" data-category="burger">
+        <img src="f2.png" alt="Burger" class="card-image"><div id="cardinfo" >
+        <h2 class="card-title">Delicious Burger</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$15<span id="buttonspace"><button class="card-button" onclick="addToCart('Delicious Burger', 15)">Add to Cart</button></span></p></div>    
+    </div>
+    <div class="card" data-category="pizza">
+        <img src="f3.png" alt="Pizza" class="card-image"><div id="cardinfo" >
+        <h2 class="card-title">Delicious Pizza</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$17<span id="buttonspace">
+        <button class="card-button" onclick="addToCart('Delicious Pizza', 20)">Add to Cart</button></span></p></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card" data-category="pasta">
+        <img src="f4.png" alt="Pasta" class="card-image"><div id="cardinfo">
+        <h2 class="card-title">Delicious Pasta</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$17<span id="buttonspace">
+        <button class="card-button" onclick="addToCart('Delicious Pasta', 17)">Add to Cart</button></span></p></div>
+    </div>
+    <div class="card" data-category="fries">
+        <img src="f5.png" alt="frenchfries" class="card-image"><div id="cardinfo">
+        <h2 class="card-title">Delicious Fries</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$17<span id="buttonspace">
+        <button class="card-button" onclick="addToCart('Delicious Fries', 17)">Add to Cart</button></span></p></div>
+    </div>
+    <div class="card" data-category="pizza">
+        <img src="f6.png" alt="Pizza" class="card-image">
+        <div id="cardinfo">
+        <h2 class="card-title">Delicious Pizza</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$20<span id="buttonspace"><button class="card-button" onclick="addToCart('Delicious Pizza', 20)">Add to Cart</button></span></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>    
+    <div class="card" data-category="burger">
+        <img src="f7.png" alt="Burger" class="card-image"><div id="cardinfo">
+        <h2 class="card-title">Delicious Burger</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$15<span id="buttonspace"><button class="card-button" onclick="addToCart('Delicious Burger', 15)">Add to Cart</button></span></p></div>    
+    </div>
+    <div class="card" data-category="burger">
+        <img src="f8.png" alt="Burger" class="card-image"><div id="cardinfo">
+        <h2 class="card-title">Delicious Burger</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$15<span id="buttonspace"><button class="card-button" onclick="addToCart('Delicious Burger', 15)">Add to Cart</button></span></p></div>    
+    </div>
+    <div class="card" data-category="pasta">
+        <img src="f9.png" alt="Pasta" class="card-image"><div id="cardinfo">
+        <h2 class="card-title">Delicious Pasta</h2>
+        <p class="card-description">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+        <p class="card-price">$17<span id="buttonspace">
+        <button class="card-button" onclick="addToCart('Delicious Pasta', 17)">Add to Cart</button></span></p></div>
+    </div>
+</br>
+</br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</br>
+</br>
+
+
+<div id="aboutcontainer" class="aboutcontainer">
+    <h2 id="aboutheading">We Are Feane</h2>
+    <p id="aboutpara">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humour, or <br>randomised words which don't look even slightly believable.<br> If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't <br>anything embarrassing hidden in the middle of text.</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div id="formhead">Book a Table</div>
+<br>
+<form id="bookingForm" action="diningtable.html" method="post">
+<div id="tableform" class="tableform">
+    <label for="name" class="name">NAME</label>
+    <input type="text" placeholder="your name" required>
+
+    <label for="Phoneno" class="Phoneno">PHONE NUMBER</label>
+    <input type="text" placeholder="your Phoneno"  minlength="10" required>
+
+    <label for="email" class="email">GMAIL</label>
+    <input type="email" placeholder="your email" required>
+
+    <label for="persons" class="persons">PERSONS</label>
+    <select id="select" required>
+        <option value="" required>How Many Persons?</option>
+        <option value="1" placeholder="how many persons">1 </option> 
+        <option value="2" placeholder="how many persons">2</option> 
+        <option value="3" placeholder="how many persons">3</option> 
+        <option value="4" placeholder="how many persons">4</option> 
+        <option value="5" placeholder="how many persons">5</option> 
+    </select>
+    <label for="date" >BOOKING DATE</label>
+    <input type="date" required>
+    <label for="submit"></label>
+    <a href="diningtable.html"><button id="formbtn" >Book Now!!</button></a>
+</div>
+</form>
+<br>
+<br>
+<br>
+  <!--<h1 id="finalhead">What Says our Customer</h1>  -->
+<br>
+
+
+
+
+<div class="slidebar">
+<div class="scroll">
+    <div class="contents">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        <h2>Mohana michell</h2>
+        <h2>magna aliqua</h2>
+    </div>
+    <image id="images" src="client1.jpg">      
+</div>
+
+<div class="scroll">
+    <div class="contents">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        <h2>mike hamell</h2>
+        <h2>magna aliqua</h2>
+    </div>
+    <image id="images" src="client2.jpg">      
+</div>
+
+<div class="scroll">
+    <div class="contents">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        <h2>Mohana michell</h2>
+        <h2>magna aliqua</h2>
+    </div>
+    <image id="images" src="client1.jpg">      
+</div>
+
+<div class="scroll">
+    <div class="contents">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        <h2>mike hamell</h2>
+        <h2>magna aliqua</h2>
+    </div>
+    <image id="images" src="client2.jpg">      
+</div>
+</div>
+
+<div id="leftbutton"><button>&#x2190;</button></div>
+<div id="rightbutton"><button>&#x2192;</button></div>
+
+<br>
+<br>
+<br>
+<br>
+<div id="footer">
+    <div id="footer1">
+        <h1>Contact Us</h1>
+        <h2> &#128241; Call +01 1234567890</h2>
+        <h2>&#128197; demo@gmail</h2>
+    </div>
+    <div id="footer2">
+        <h1>Resto</h1>
+        <p>Necessary, making this the first true<br> generator on the Internet. It uses a<br> dictionary of over 200 Latin words,<br> combined with</p>
+    </div>
+    <div id="footer3">
+        <h1>Opening hours</h1>
+        <h2> Everyday</h2>
+        <h2>10AM - 10PM</h2>
+    </div>
+
+    <div id="footerlast">
+        <p>&#169;2024 All Rights Reserved By Free Html Templates</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="home.js"></script>
+</body>
+</html>

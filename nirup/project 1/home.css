@@ -1,0 +1,724 @@
+
+
+#nav {
+    block-size: 60px;
+    color: beige;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    align-items: center; /* Vertically center items in the nav */
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0 15px; /* Add padding around the links for better spacing */
+}
+
+#nav a:hover {
+    color: orange;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: orange;
+}
+#firstimage {
+    background-image: url('hero-bg.jpg'); /* Change to your new image */
+    block-size: 750px;
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    overflow: hidden; /* Ensure no overflow */
+}
+@media (max-width: 768px) {
+    #firstimage {
+        block-size: 500px; /* Adjust the height of the hero image for smaller screens */
+        background-position: center; /* Center the image */
+    }
+    #nav {
+        flex-direction: column; /* Stack the navigation links vertically on smaller screens */
+        gap: 10px; /* Reduce the gap between links on smaller screens */
+    }
+
+}
+
+#orderonline {
+    font-size: 18px;
+    background-color: yellow;
+    color: white;
+    block-size: 50px;
+    inline-size: 130px;
+    border: 1px solid orange;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+}
+
+#orderonline:hover {
+    background-color: orangered;
+}
+
+#left {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Default styles for containers */
+
+/* Default styles for containers */
+#today {
+    display: flex; /* Align containers horizontally by default */
+    gap: 20px; /* Space between containers */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    justify-content: center; /* Center containers horizontally */
+}
+
+#container1, #container2 {
+    block-size: auto; /* Height adjusts to content */
+    inline-size: 600px; /* Default width */
+    border: #223821;
+    background-color: grey;
+    padding: 10px; /* Optional padding for better appearance */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between image and text */
+}
+
+/* Style for images and offers within containers */
+.imagebox1, .imagebox2 {
+    block-size: 150px;
+    inline-size: 150px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center; /* Center the background image */
+}
+
+#imagebox1 {
+    background-image: url('o1.jpg'); /* Set the image for container 1 */
+}
+
+#imagebox2 {
+    background-image: url('o2.jpg'); /* Set the image for container 2 */
+}
+.imagebox1:hover, .imagebox2:hover {
+    transform: scale(1.2); /* Scale up the image on hover */
+      transition: transform 2s;
+}
+
+
+.offer1, .offer2 {
+    font-family: cursive;
+    color: white;
+    font-size: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #today {
+        flex-direction: column; /* Stack containers vertically on small screens */
+        align-items: center; /* Center containers horizontally */
+    }
+
+    #container1, #container2 {
+        inline-size: 90%; /* Responsive width */
+        max-inline-size: 90%; /* Prevent overflow */
+        margin: 10px 0; /* Vertical margins for spacing */
+        flex-direction: column; /* Stack image and offer vertically */
+        align-items: center; /* Center contents horizontally */
+    }
+    
+    .imagebox1, .imagebox2 {
+        margin: 0 0 20px; /* Center image horizontally and add margin below */
+    }
+
+    .offer1, .offer2 {
+        text-align: center; /* Center text */
+    }
+}
+
+
+
+/* General Styles for Cards */
+.card {
+    inline-size: 300px; /* Default width */
+    block-size: auto; /* Height adjusts to content */
+    margin: 20px;
+    border-radius: 10px 10px 10px 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 2s; /* Smooth scale transition */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.card.hidden {
+    display: none;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 1.3;
+}
+
+.card-image {
+    inline-size: 150px;
+    block-size: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.card-image:hover {
+    transform: scale(1.2);
+    z-index: 1.3;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-block-end: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    margin-block-end: 20px;
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-block-end: 10px;
+}
+
+.card-button {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Container for Cards */
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* Style for Card Details Background */
+.card-description {
+    background-color:gray; /* Grey background color */
+    padding: 10px; /* Optional padding for better appearance */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .card {
+        inline-size: 90%; /* Responsive width */
+        max-inline-size: 90%; /* Prevent overflow */
+        margin: 10px 0; /* Vertical margins for spacing */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aboutcontainer{
+    block-size: 710px;
+    border: 2px solid black;
+    margin-block-start: 100px;
+}
+.aboutcontainer{
+    background-image: url('about-img.png');
+    background-repeat: no-repeat;
+    background-size: 40% 90%;
+    background-position: center;
+    background-color: #161515;
+    background-position: 45px 28px;
+}
+.aboutcontainer h2{
+    color: #fff;
+    font-family: cursive;
+    font-size: 40px;
+    margin-inline-start:60%;
+    margin-block-start: 15%;
+    
+}
+.aboutcontainer p{
+    color: white;
+    font-family: cursive;
+    font-size: 19px;
+    margin-inline-start: 50%;
+    margin-block-start: 5%;
+}
+.tableform{
+   display: grid;
+   grid-gap: 10px;
+   block-size: 500px;
+   max-inline-size:600px;
+   border: 1px solid plum;
+   background-color: plum;
+   margin-inline-start: 13%;
+}
+.tableform:hover{
+    border: 5px solid plum ;
+    box-shadow: 24px 10px 10px purple;
+}
+input[type="text"], input[type="number"], input[type="email"], input[type="date"]{
+    inline-size: 90%;
+    padding: 8px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: cursive;
+    font-size: 15px;
+    margin-inline-start: 2%;
+}
+#select{
+    block-size: 40px;
+    inline-size:93%;
+    border: 1px solid black;
+    font-family: cursive;
+    font-size: 15px;
+    margin-inline-start: 2%;
+}
+#formhead{
+    font-family: cursive;
+    font-size:40px;
+    margin-inline-start: 15%;
+}
+#formhead:hover{
+    color: orangered;
+}
+#formbtn{
+    block-size: 40px;
+    inline-size: 170px;
+    border: 1px solid yellow;
+    background-color: yellow;
+    border-radius:15px;
+    font-size: 20px;
+    margin-inline-start: 5%;
+}
+#formbtn:hover{
+    background-color: orangered;
+}
+
+#finalhead{
+    font-family: cursive;
+    margin-inline-start: 40%;
+}
+#finalhead:hover
+{
+ color: orangered;
+}
+
+
+/* slide bar */
+
+
+/* Base Styles for Slidebar */
+.slidebar {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks in content */
+    position: relative;
+    transition: width 0.3s ease-in-out, min-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+.scroll {
+    height: 310px;
+    width: 600px;
+    border: 1px solid wheat;
+    border-radius: 10px;
+    margin: 30px 90px 0 90px; /* Adjust margins */
+    transition: width 0.3s ease-in-out; /* Smooth width transition */
+}
+
+.contents {
+    height: 140px;
+    width: 600px;
+    background-color: #161515;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out; /* Smooth width transition */
+}
+
+.contents h2 {
+    font-family: cursive;
+    font-size: 10px;
+    display: grid;
+    justify-content: left;
+    color: white;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.contents p {
+    font-family: cursive;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-left: 6px;
+}
+
+#images {
+    height: 125px;
+    width: 125px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Button Styles */
+/* Button Styles */
+#leftbutton, #rightbutton {
+    position: absolute; /* Position buttons relative to the parent container */
+    background: yellow; /* Yellow inside of the button */
+    border: 2px solid white; /* White border around the button */
+    border-radius: 50%; /* Make the button circular */
+    padding: 20px; /* Increase padding for a larger button */
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Button Arrow Styles */
+#leftbutton button, #rightbutton button {
+    background: none;
+    border: none;
+    color: white; /* Text color inside the button (arrow) */
+    font-size: 30px; /* Increase font size of the arrow */
+    line-height: 1; /* Adjust line height */
+    padding: 0;
+}
+
+/* Optional: Add hover effects for buttons */
+#leftbutton:hover, #rightbutton:hover {
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Button Positions */
+#leftbutton {
+    left: 10px; /* Adjust position for smaller screens */
+    bottom: 10px; /* Position near the bottom of the slidebar */
+}
+
+#rightbutton {
+    right: 10px; /* Adjust position for smaller screens */
+    bottom: 10px; /* Position near the bottom of the slidebar */
+}
+
+/* Ensure buttons are positioned within the slidebar */
+
+.slidebar {
+    position: relative; /* Ensure buttons are positioned relative to this container */
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks in content */
+    transition: width 0.3s ease-in-out, min-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #leftbutton, #rightbutton {
+        padding: 15px; /* Adjust button size for smaller screens */
+        font-size: 24px; /* Reduce font size of arrow */
+        bottom: 10px; /* Keep buttons near the bottom of the slidebar */
+        left: 5px; /* Adjust position for smaller screens */
+        right: 5px; /* Adjust position for smaller screens */
+    }
+}
+
+
+/* Button Styles */
+#leftbutton, #rightbutton {
+    position: absolute;
+    top: 100%; /* Place buttons just below the slidebar */
+    transform: translateY(-50%);
+    background: yellow; /* Yellow inside of the button */
+    border: 2px solid white; /* White border around the button */
+    border-radius: 50%; /* Make the button circular */
+    padding: 20px; /* Increase padding for a larger button */
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Button Arrow Styles */
+#leftbutton button, #rightbutton button {
+    background: none;
+    border: none;
+    color: white; /* Text color inside the button (arrow) */
+    font-size: 30px; /* Increase font size of the arrow */
+    line-height: 1; /* Adjust line height */
+    padding: 0;
+}
+
+/* Optional: Add hover effects for buttons */
+#leftbutton:hover, #rightbutton:hover {
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Button Positions */
+#leftbutton {
+    left: 500px; /* Position left button near the header */
+    top: 640%; /* Adjust to ensure it’s just below the slidebar */
+    
+}
+
+#rightbutton {
+    right: 500px; /* Position right button near the header */
+    top: 640%; /* Adjust to ensure it’s just below the slidebar */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slidebar {
+        min-height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .scroll {
+        width: 80%; /* Reduce width for smaller screens */
+        margin: 10px; /* Adjust margins */
+    }
+
+    .contents {
+        width: 80%; /* Reduce width for smaller screens */
+    }
+
+    #images {
+        height: 100px; /* Reduce image size for smaller screens */
+        width: 100px;
+    }
+
+    #leftbutton, #rightbutton {
+        padding: 15px; /* Adjust button size for smaller screens */
+        font-size: 24px; /* Reduce font size of arrow */
+        top: 900%; /* Adjust button position for smaller screens */
+        left: 30%;
+    }
+
+    #leftbutton {
+        left: 15px; /* Adjust position for smaller screens */
+      
+    }
+
+    #rightbutton {
+        right: 10px;; /* Adjust position for smaller screens */
+    }
+}
+
+
+
+/* footer */
+
+
+/* Base Footer Styles */
+#footer {
+    height: 400px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #222831;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px; /* Add some padding */
+}
+
+#footer1, #footer2, #footer3 {
+    height: auto; /* Adjust height based on content */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit width on larger screens */
+    color: white;
+    padding: 10px; /* Add padding inside each section */
+}
+
+#footer1 {
+    margin: 10px;
+}
+
+#footer2 {
+    margin: 10px;
+}
+
+#footer3 {
+    margin: 10px;
+}
+
+/* Footer Heading Styles */
+#footer1 h1, #footer2 h1, #footer3 h1 {
+    font-family: cursive;
+    font-size: 24px; /* Adjust font size */
+}
+
+#footer1 h2, #footer2 h2, #footer3 h2 {
+    font-size: 20px; /* Adjust font size */
+}
+
+/* Footer Paragraph Styles */
+#footer2 p, #footerlast p {
+    font-size: 20px; /* Adjust font size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Auto height to fit content */
+    }
+
+    #footer1, #footer2, #footer3 {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove maximum width constraint */
+    }
+
+    #footer1 h1, #footer2 h1, #footer3 h1 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    #footer1 h2, #footer2 h2, #footer3 h2 {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    #footer2 p, #footerlast p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+/*footer still here*/
+#svg{
+    height:45px;
+    width: 45px;
+    border:0px solid  yellow;
+    background-color: #ffc107;
+    margin-left:250px;
+    margin-top: 1px;
+    border-radius: 10px ;
+}
+#count{
+    color: white;
+    font-size:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:-1px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background-color: red;
+    height: 100px;
+    width: 150px;
+}
+
+
+
+
+/* Base styles */
+#left {
+    font-size: 2rem; /* Use rem or em for responsive font size */
+    margin-right: auto; /* Use flexbox or grid for layout instead of fixed margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #left {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        margin-right: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .container1, .container2 {
+        display: flex;
+        flex-direction: column; /* Stack images and text vertically on smaller screens */
+    }
+
+    .Menubutton {
+        display: flex;
+        flex-direction: row; /* Stack buttons vertically on smaller screens */
+    }
+
+    #footer {
+        display: flex;
+        flex-direction: column; /* Stack footer sections vertically on smaller screens */
+    }
+    #leftbutton{
+        width: 5%;
+        height: 5%;
+        margin-top: 420%;
+        margin-left:5em;
+    }
+    #rightbutton{
+        width: 5%;
+        height: 5%;
+        margin-top: 420%;
+        margin-left:5em;
+    }
+}
